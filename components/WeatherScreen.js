@@ -1,6 +1,6 @@
 import React from 'react';
 import Weather from './Weather';
-import { Text,Button} from 'react-native';
+import { Text, Button } from 'react-native';
 export default class WeatherScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
@@ -11,8 +11,10 @@ export default class WeatherScreen extends React.Component {
             )
         }
     }
+
     render() {
         const zipCode = this.props.navigation.getParam('zipCode')
         return (<Weather zipCode={zipCode} />);
     }
+
 }
